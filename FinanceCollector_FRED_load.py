@@ -1,4 +1,3 @@
-# API key : 53a503351226f6becb825f08e76d2298
 from fredapi import Fred
 import pandas as pd
 import pandas_datareader.data as web
@@ -31,7 +30,7 @@ from sqlalchemy import create_engine, text
 
 
 def FREDDataExt(engine_in, start_date, end_date):
-    fred = Fred(api_key='53a503351226f6becb825f08e76d2298')
+    fred = Fred(api_key=os.environ.get('fredkey'))
     indicators = {
         'GDPC1': 'GDPC1',  # Real Gross Domestic Product, Q
         'CBIC1': 'CBIC1',  # Change in Real Private Inventories, Q
