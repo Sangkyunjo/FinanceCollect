@@ -1,11 +1,11 @@
-from fredapi import Fred
 import pandas as pd
-import pandas_datareader.data as web
-from sqlalchemy import create_engine
+import os
+
+import pandas as pd
 import sqlalchemy as sqla
 from fredapi import Fred
+from sqlalchemy import text
 from tqdm import tqdm
-from sqlalchemy import create_engine, text
 
 
 # data = web.DataReader(indicators.keys(), 'fred', '19900101', '20240410')
